@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web3Health — UGA SensorWeb Lab</title>
+  <meta name="description"
+    content="A research-backed app that lets users collect and share their wearable health metrics with participating studies using privacy-first blockchain infrastructure." />
+  <link rel="icon" href="Web3Health.png" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --surface: #111217;
+      --card: #161821;
+      --text: #e6e6e6;
+      --muted: #a5a7af;
+      --accent: #c41f37;
+      --accent-2: #ff4757;
+      --border: #262837;
+      --ok: #17c964;
+      --warn: #f5a524;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+    header { display: flex; align-items: center; gap: 20px; padding: 28px 0; }
+    header img { width: 72px; height: 72px; border-radius: 16px; background: white; padding: 6px; }
+    h1 { font-size: 2rem; margin: 0; line-height: 1.2; }
+    .subtitle { color: var(--muted); margin-top: 6px; }
+    .hero { background: linear-gradient(180deg, rgba(196, 31, 55, 0.12), rgba(0, 0, 0, 0)); border: 1px solid var(--border); padding: 18px; border-radius: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 18px; }
+    .card { grid-column: span 12; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+    h2 { margin-top: 0; font-size: 1.25rem; }
+    ul { margin-top: 8px; padding-left: 20px; }
+    footer { margin: 32px 0 12px; color: var(--muted); }
+    @media (min-width: 720px) {
+      .card--6 { grid-column: span 6; }
+      .card--4 { grid-column: span 4; }
+      .card--8 { grid-column: span 8; }
+    }
+    .btns a { display: inline-block; padding: 10px 14px; border: 1px solid var(--border); background: #1b1d29; border-radius: 10px; margin-right: 10px; }
+    .ok { color: var(--ok); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MobileApplication",
+    "name":"Web3Health",
+    "operatingSystem":"Android",
+    "applicationCategory":"HealthApplication",
+    "author":{"@type":"Organization","name":"UGA SensorWeb Lab"},
+    "description":"A research-backed app that lets users collect and share their wearable health metrics with participating studies using privacy-first blockchain infrastructure.",
+    "url":""
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="Web3Health.png" alt="Web3Health logo" />
+      <div>
+        <h1>Web3Health</h1>
+        <div class="subtitle">UGA SensorWeb Lab</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="pill" style="display:inline-block;padding:6px 10px;background:#1b1d29;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px;">Research-backed • Privacy-first • User-controlled sharing</p>
+      <p style="margin-top:10px; font-size: 1.05rem;">
+        A research-backed app that lets users collect and share their wearable health metrics with participating studies
+        using privacy-first blockchain infrastructure.
+      </p>
+      <p class="subtitle">Web3Health is part of an ongoing academic research project conducted by the UGA SensorWeb Lab. Features and data-handling workflows are actively being refined to support ethical, privacy-aware research participation.</p>
+      <div class="btns" style="margin-top: 10px;">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="mailto:engr-sensorweb@uga.edu">Contact Support</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card card--8">
+        <h2>What the app does</h2>
+        <ul>
+          <li>Securely reads health metrics you consent to share (e.g., steps, distance, heart rate, sleep, calories).</li>
+          <li>Lets you opt into specific sharing opportunities with universities, research studies, or trusted buyers.</li>
+          <li>Uploads only the windows of data you approve; you can pause or cancel at any time.</li>
+          <li>Stores records on a secure backend; sensitive data benefits from HTTPS in transit and managed encryption at rest.</li>
+        </ul>
+      </article>
+
+      <article class="card card--4">
+        <h2>Who is it for?</h2>
+        <ul>
+          <li>Participants in SensorWeb Lab studies.</li>
+          <li>Individuals who want granular control over their wearable data.</li>
+          <li>Partners who value consent, transparency, and auditability.</li>
+        </ul>
+      </article>
+
+      <article class="card card--6">
+        <h2>Permissions used</h2>
+        <ul>
+          <li><strong>Health data access</strong> — to read metrics (steps, heart rate, sleep, active calories) you approve.</li>
+          <li><strong>Background tasks</strong> — to sync approved data windows even when the app isn't open.</li>
+          <li><strong>Notifications</strong> — to remind you when a window is due or if attention is needed.</li>
+          <li><strong>Network access</strong> — to securely upload data to our servers.</li>
+        </ul>
+        <p class="subtitle">You can revoke any permission later in your device settings.</p>
+      </article>
+
+      <article class="card card--6">
+        <h2>Data safety at a glance</h2>
+        <ul>
+          <li><span class="ok">✔</span> Data in transit is protected with HTTPS (TLS). Stored data uses Supabase’s managed database encryption and access controls.</li>
+          <li><span class="ok">✔</span> We only collect data categories needed to run the app and fulfill your choices.</li>
+          <li><span class="ok">✔</span> You can request <strong>account deletion</strong> and <strong>data export</strong> at any time via support; deletion requests are handled manually.</li>
+          <li><span class="ok">✔</span> We do <strong>not</strong> sell your personal data.</li>
+        </ul>
+        <p class="subtitle">See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
+      </article>
+
+      <article class="card card--12">
+        <h2>Support &amp; contact</h2>
+        <p>Email: <a href="mailto:engr-sensorweb@uga.edu">engr-sensorweb@uga.edu</a></p>
+        <p>Affiliation: UGA SensorWeb Lab</p>
+      </article>
+    </section>
+
+    <footer>
+      <div>&copy; 2025-10-21 Web3Health • UGA SensorWeb Lab</div>
+      <div style="margin-top:6px;">
+        <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
